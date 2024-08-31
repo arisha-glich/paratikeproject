@@ -1,72 +1,53 @@
-import React from 'react';
+import React from "react";
+import { EventCard } from "./EventCard";
+
+// Import your images
+import image1 from '../assets/1.jpeg';
+import image2 from '../assets/2.jpeg';
+import image3 from '../assets/3.jpeg';
 
 const FeaturedEvents = () => {
   return (
-    <section className="max-w-screen-xl mx-auto py-10">
-      <h2 className="text-3xl font-bold text-blue-600 mb-8">Featured Events</h2>
-      
-      <div className="grid grid-cols-3 gap-6">
-        {/* Event Card 1 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4">
-            <h3 className="text-xl font-bold">Introduction Basic Programming HTML & CSS</h3>
-            <p className="text-gray-500 mt-2">21 Feb, 2023 | Club Cirrus</p>
-            <p className="text-blue-600 font-bold mt-4">$10.00</p>
-          </div>
+    <>
+    <div className="px-40"> 
+      <div className="items-start bg-white flex flex-col p-8">
+        <h2 className="font-outfit text-[12px] font-medium leading-[17.64px] tracking-[0.02em] text-left text-blue-600">
+          Featured!
+        </h2>
+        <div className="font-outfit text-[48px] font-normal leading-[60.48px] tracking-[-0.02em] text-left">
+  <span className="text-blue-900">Featured</span>
+  <span className="text-blue-600"> Events</span>
+</div>
+        <div className="flex flex-wrap m-3 justify-center">
+          <EventCard
+            date="21 Feb, 2023"
+            title="Introduction Basic Programming HTML & CSS"
+            image={image1} // Pass the imported image here
+            location="Club Cirrus"
+            price="$10.00"
+          />
+          
+          <EventCard
+            date="21 Feb, 2023"
+            title="Introduction Basic Programming HTML & CSS"
+            image={image2} // Pass the imported image here
+            location="Club Cirrus"
+            price="$10.00"
+          />
+          
+          <EventCard
+            date="21 Feb, 2023"
+            title="Introduction Basic Programming HTML & CSS"
+            image={image3} // Pass the imported image here
+            location="Club Cirrus"
+            price="$10.00"
+          />
         </div>
-        
-        {/* Event Card 2 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4">
-            <h3 className="text-xl font-bold">Introduction Basic Programming HTML & CSS</h3>
-            <p className="text-gray-500 mt-2">21 Feb, 2023 | Club Cirrus</p>
-            <p className="text-blue-600 font-bold mt-4">$10.00</p>
-          </div>
-        </div>
-        
-        {/* Event Card 3 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4">
-            <h3 className="text-xl font-bold">Introduction Basic Programming HTML & CSS</h3>
-            <p className="text-gray-500 mt-2">21 Feb, 2023 | Club Cirrus</p>
-            <p className="text-blue-600 font-bold mt-4">$10.00</p>
-          </div>
-        </div>
+      </div> 
+    </div>
+    <div className="w-[11111px] h-0 border-t border-[#00000012] bg-gray-400  opacity-100 mt-[11] ml-[12px]"></div>
+    </>
 
-        {/* Event Card 4 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4">
-            <h3 className="text-xl font-bold">Introduction Basic Programming HTML & CSS</h3>
-            <p className="text-gray-500 mt-2">21 Feb, 2023 | Club Cirrus</p>
-            <p className="text-blue-600 font-bold mt-4">$10.00</p>
-          </div>
-        </div>
-
-        {/* Event Card 5 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4">
-            <h3 className="text-xl font-bold">Introduction Basic Programming HTML & CSS</h3>
-            <p className="text-gray-500 mt-2">21 Feb, 2023 | Club Cirrus</p>
-            <p className="text-blue-600 font-bold mt-4">$10.00</p>
-          </div>
-        </div>
-
-        {/* Event Card 6 */}
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="p-4">
-            <h3 className="text-xl font-bold">Introduction Basic Programming HTML & CSS</h3>
-            <p className="text-gray-500 mt-2">21 Feb, 2023 | Club Cirrus</p>
-            <p className="text-blue-600 font-bold mt-4">$10.00</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center mt-8">
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-          View More
-        </button>
-      </div>
-    </section>
   );
 };
 

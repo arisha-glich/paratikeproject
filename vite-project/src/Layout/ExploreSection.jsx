@@ -1,21 +1,40 @@
-import React from 'react';
+import React from "react";
+import Button from "./Button";
 
+import icon from "../assets/Icon.png";
+import ImageGallery from "./ImageGallery";
 const ExploreSection = () => {
   return (
-    <section className="bg-black text-white py-10">
-      <div className="px-20">
-        <h2 className="text-2xl font-bold mb-6">Explore by Organizer</h2>
-        <div className="grid grid-cols-2 gap-6">
-          <div className="bg-gray-800 rounded p-6">
-            <img src="/path-to-image1.jpg" alt="Organizer 1" className="w-full rounded mb-4" />
-            <button className="bg-blue-600 text-white px-4 py-2 rounded">Follow Organizer 1</button>
-          </div>
-          <div className="bg-gray-800 rounded p-6">
-            <img src="/path-to-image2.jpg" alt="Organizer 2" className="w-full rounded mb-4" />
-            <button className="bg-blue-600 text-white px-4 py-2 rounded">Follow Organizer 2</button>
-          </div>
+    <section
+      className="w-[1440px] h-[587px] px-[120px] pt-[62px] pb-[53px] bg-black"
+      style={{ top: "2247px" }}
+    >
+      <div className="w-[1200px] h-[472px] mx-auto relative">
+        <div className="font-frank-ruhl-libre text-[50px] font-normal  tracking-[-0.05em] text-left ">
+          <span className="text-white">Explore </span>
+          <span className="text-blue-500">by Organizer</span>
         </div>
+        <Button
+          text="Explore All Organizers"
+          backgroundColor="bg-blue-600"
+          hoverColor="hover:bg-blue-700"
+          width="w-[232px]"
+          height="h-[56px]"
+          top="top-[90px]"
+          left="left-[931px]"
+          opacity="opacity-100"
+          onClick={() => alert("Button clicked!")}
+        />{" "}
+        <img
+          src={icon}
+          alt="Icon"
+          className="absolute w-[119.56px] h-[66px] top-[85px] left-[1000px] opacity-100"
+          style={{
+            borderRadius: "210.43px 0px 0px 0px",
+          }}
+        />  <ImageGallery/>
       </div>
+    
     </section>
   );
 };
